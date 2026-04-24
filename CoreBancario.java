@@ -5,6 +5,7 @@ import java.util.*;
  * Versión 1.0 - Módulo de Pruebas
  */
 public class CoreBancario {
+    private int prueba;
     private double balance;
     private List<String> historial; // DEFECTO DATOS: Lista no inicializada
     // MÓDULO DE TRANSACCIONES
