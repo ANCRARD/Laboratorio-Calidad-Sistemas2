@@ -25,7 +25,7 @@ jobs:
         with:
           args: >
             -Dsonar.projectKey=ancrard_Laboratorio-Calidad-Sistemas2
-            -Dsonar.organization=ancrard
+            -Dsonar.organization=teamcami
             -Dsonar.sources=.
         env:
           SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
