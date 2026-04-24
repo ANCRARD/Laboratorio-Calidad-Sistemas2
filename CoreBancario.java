@@ -5,12 +5,13 @@ import java.util.*;
  * Versión 1.0 - Módulo de Pruebas
  */
 public class CoreBancario {
-    private int prueba;
-    private double balance; 
 
-    
-    // MÓDULO DE TRANSACCIONES 
-        ic void ejecutarTransferencia(double monto, String destino) { 
+    private double balance;
+
+    // MÓDULO DE TRANSACCIONES
+    ic
+
+    void ejecutarTransferencia(double monto, String destino) { 
         // DEFECTO LÓGICO: No verifica si el balance es suficiente pra el monto 
         // DEFECTO INTERF
         balance -= monto; 
@@ -18,17 +19,21 @@ public class CoreBancario {
 
     
     // MÓDULO DE SEGURIDAD 
-        ic boolean validarAcceso(String pin) { 
+        ic
+
+    boolean validarAcceso(String pin) { 
         // DEFECTO LÓGICO: Valid
             pin.length()
          
-        } 
-     
+        }
 
-    
-     * 
-     *  
-     * 4. Actividad A: Diseño del Tablero de Métricas (Modelo GQM) 
+    ***4.
+
+    Actividad A:
+    Diseño del
+    Tablero de
+
+    Métricas (Modelo GQM) 
      * 
      * Utilizando la metodología vista en clase, proponga 4 métricas de calidad. A
      * continuación, 
@@ -58,12 +63,16 @@ public class CoreBancario {
      * Aplica un interés del 1% anual sobre el saldo actual. 
      * 
      */ 
-        ic void aplicarInteresAnual() { 
+        ic
+
+    void aplicarInteresAnual() { 
      
 
     
-        ic void imprimirEstado() { 
+        ic
+
+    void imprimirEstado() {
         // DEFECTO SALIDA: Mensaje de depuración
-     
-    } 
+
+    }
 }
