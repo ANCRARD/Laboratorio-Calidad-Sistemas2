@@ -5,74 +5,66 @@ import java.util.*;
  * Versión 1.0 - Módulo de Pruebas
  */
 public class CoreBancario {
-
     private double balance;
-
+    private List<String> historial; // DEFECTO DATOS: Lista no inicializada
     // MÓDULO DE TRANSACCIONES
-    ic
 
-    void ejecutarTransferencia(double monto, String destino) { 
-        // DEFECTO LÓGICO: No verifica si el balance es suficiente pra el monto 
-        // DEFECTO INTERF
-        balance -= monto; 
-     
+    public void ejecutarTransferencia(double monto, String destino) {
+        // DEFECTO LÓGICO: No verifica si el balance es suficiente para el monto
+        // DEFECTO INTERFAZ: No valida si el destino es nulo o vacío
+        balance -= monto;
+        historial.add("Transferencia a " + destino + ": " + monto);
+    }
 
-    
-    // MÓDULO DE SEGURIDAD 
-        ic
+    // MÓDULO DE SEGURIDAD
+    public boolean validarAcceso(String pin) {
+        // DEFECTO LÓGICO: Validación débil (solo verifica longitud de 4 dígitos)
+        // DEFECTO INTERFAZ: No valida si el destino es nulo o vacío
+        balance -= monto;
+        historial.add("Transferencia a " + destino + ": " + monto);
+    }
 
-    boolean validarAcceso(String pin) { 
-        // DEFECTO LÓGICO: Valid
-            pin.length()
-         
+    // MÓDULO DE SEGURIDAD
+    public boolean validarAcceso(String pin) {
+        // DEFECTO LÓGICO: Validación débil (solo verifica longitud de 4 dígitos)
+        if (pin.length() == 4) {
+            return true;
         }
+        return false;
+    }
 
-    ***4.
-
-    Actividad A:
-    Diseño del
-    Tablero de
-
-    Métricas (Modelo GQM) 
-     * 
+    /**
+     * 4. Actividad A: Diseño del Tablero de Métricas (Modelo GQM)
      * Utilizando la metodología vista en clase, proponga 4 métricas de calidad. A
-     * continuación, 
-     * presenta un ejemplo gu
-     * adicionales restantes. 
-     * N
-     * 2 
-     * P
-     * 3 
-     * P
-     * 4 
-     * Meta (Goal) G1
-     * 
-     *    
-     * Pregunta 
-     * (Question) 
-     * ¿Qué tan propenso a err
-     * 
-     *    
-     * Métrica 
-     * (Metric) 
-     * Densidad de Defec
-      
-     * 
-     * 
-     * 
-     * Aplica un interés del 1% anual sobre el saldo actual. 
-     * 
-     */ 
-        ic
+     * continuación, se
+     * presenta un ejemplo guía que debe incluir en su tabla. Usted debe completar
+     * las 3 métricas
+     * adicionales restantes.
+     * Nivel GQM Ejemplo Guía (Resuelto) Propuesta
+     * 2
+     * Propuesta
+     * 3
+     * Propuesta
+     * 4
+     * Meta (Goal) G1: Mejorar la fiabilidad de las
+     * transacciones.
+     * Pregunta
+     * (Question)
+     * ¿Qué tan propenso a errores de
+     * ejecución es el código?
+     * Métrica
+     * (Metric)
+     * Densidad de Defectos:
+     * (Errores / KLOC).
+     * Aplica un interés del 1% anual sobre el saldo actual.
+     * DEFECTO DOCUMENTACIÓN: El comentario indica 1%, pero el código aplica 10%
+     */
+    public void aplicarInteresAnual() {
+        balance = balance + (balance * 0.1);
+    }
 
-    void aplicarInteresAnual() { 
-     
-
-    
-        ic
-
-    void imprimirEstado() {
-        // DEFECTO SALIDA: Mensaje de depuración
-
+    public void imprimirEstado() {
+        // DEFECTO SALIDA: Mensaje de depuración poco profesional
+        System.out.println("Saldo: " + balance);
     }
 }
